@@ -16,8 +16,9 @@ if exist .venv\Scripts\activate.bat (
 )
 
 REM Install dependencies
-pip install --upgrade pip >nul
-pip install -r requirements.txt
+call .venv\Scripts\python.exe -m pip install --upgrade pip
+call .venv\Scripts\python.exe -m pip install -r requirements.txt
+
 
 REM Run the bot
 python bot.py
