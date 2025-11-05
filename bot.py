@@ -1,6 +1,7 @@
 import json
 import os
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Dict
 
 import discord
@@ -9,7 +10,7 @@ import requests
 from datetime import datetime
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(dotenv_path=Path(__file__).resolve().with_name(".env"), override=False)
 
 
 @dataclass(frozen=True)
